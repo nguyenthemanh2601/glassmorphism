@@ -55,6 +55,10 @@ $(".status-button:not(.open)").click(function () {
 $(".pop-up .close").click(function () {
   $(".pop-up").removeClass("visible");
 });
+$('.menu-trigger').click(function (e) {
+  $(this).toggleClass('active');
+  $('.left-side').toggleClass('active');
+});
 
 const toggleButton = document.querySelector('.dark-light');
 

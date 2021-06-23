@@ -63,7 +63,8 @@ body.bg-dark {
 }
 @media screen and (max-width: 480px) {
   body {
-    padding: 0.8em;
+    padding: 0.8rem;
+    margin: 0;
   }
 }
 
@@ -320,11 +321,12 @@ body.light-mode:before {
 }
 
 .left-side {
-  flex-basis: 240px;
+  width: 240px;
   border-right: 1px solid var(--border-color);
   padding: 26px;
   overflow: auto;
   flex-shrink: 0;
+  transition: width 0.2s ease-in;
 }
 .side-wrapper .side-title {
   display: block;
@@ -333,26 +335,25 @@ body.light-mode:before {
   display: none;
 }
 @media screen and (max-width: 945px) {
-  .left-side {
-    flex-basis: unset !important;
-    transition: flex-basis 5s ease-in;
+  .left-side:not(.active) {
+    width: 97px !important;
   }
   .left-side:hover {
-    flex-basis: 240px !important;
+    width: 240px !important;
   }
-  .side-wrapper .side-title {
+  .left-side:not(.active) .side-wrapper .side-title {
     display: none;
   }
   .left-side:hover .side-title {
     display: block !important;
   }
-  .side-wrapper hr {
+  .left-side:not(.active) .side-wrapper hr {
     display: block;
   }
   .left-side:hover .side-wrapper hr {
     display: none !important;
   }
-  .side-menu span {
+  .left-side:not(.active) .side-menu span {
     display: none;
   }
   .left-side:hover .side-menu span {
@@ -409,9 +410,39 @@ body.light-mode:before {
   border-bottom: 1px solid var(--border-color);
   height: 58px;
   flex-shrink: 0;
+  position: relative;
 }
 .main-header .header-menu {
   margin-left: 150px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  margin:0 25%;
+  height: 2px;
+  background: var(--theme-color);
+  margin: 12px;
+}
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu-trigger span:nth-of-type(2) {
+  top: 7px;
+}
+.menu-trigger span:nth-of-type(3) {
+  top: 15px;
+}
+.menu-trigger {
+  position: absolute;
+  z-index: 99999;
+  top: 10px;
+  left: 0;
+  width: 60px;
+  height: 58px;
+  cursor: pointer;
+  display: none;
 }
 @media screen and (max-width: 1055px) {
   .main-header .header-menu {
@@ -448,9 +479,20 @@ body.light-mode:before {
   overflow: auto;
   background-color: var(--theme-bg-color);
 }
+@media screen and (max-width: 615px) {
+  .left-side:not(.active) {
+    visibility: hidden;
+    opacity: 0;
+    width: 0 !important;
+    padding: 0;
+  }
+  .menu-trigger {
+    display: block;
+  }
+}
 @media screen and (max-width: 510px) {
   .content-wrapper {
-    padding: 20px;
+    padding: 10px;
   }
 }
 .content-wrapper-header {
@@ -466,6 +508,19 @@ body.light-mode:before {
   .content-wrapper-header {
     padding: 20px;
   }
+}
+.left-side.active {
+  visibility: visible;
+  opacity: 1;
+}
+.menu-trigger.active span:nth-of-type(1){
+  transform: translateY(9px) rotate(-325deg);
+}
+.menu-trigger.active span:nth-of-type(2){
+  opacity: 0;
+}
+.menu-trigger.active span:nth-of-type(3){
+  transform: translateY(-9px) rotate(325deg);
 }
 .content-wrapper.overlay {
   pointer-events: none;
@@ -825,13 +880,14 @@ body.light-mode:before {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  width: calc(100% + 20px);
+  /* width: calc(100% + 20px); */
+  width: 100%;
 }
 
 .app-card {
   display: flex;
   flex-direction: column;
-  width: calc(33.3% - 20px);
+  /* width: calc(33.3% - 20px); */
   font-size: 16px;
   background-color: var(--content-bg);
   border-radius: 14px;
@@ -839,12 +895,13 @@ body.light-mode:before {
   padding: 20px;
   cursor: pointer;
   transition: 0.3s ease;
+  height: 100%;
 }
 .app-card:hover {
   transform: scale(1.02);
   background-color: var(--theme-bg-color);
 }
-.app-card svg {
+.app-card svg,img {
   width: 28px;
   border-radius: 6px;
   margin-right: 12px;
@@ -875,10 +932,10 @@ body.light-mode:before {
   .app-card {
     width: calc(50% - 20px);
   }
-  .app-card:last-child {
+  /* .app-card:last-child {
     margin-top: 20px;
     margin-left: 0px;
-  }
+  } */
 }
 @media screen and (max-width: 565px) {
   .app-card {
@@ -898,4 +955,29 @@ body.light-mode:before {
 ::-webkit-scrollbar-thumb {
   background: var(--scrollbar-bg);
   border-radius: 10px;
+}
+
+@media screen and (min-width: 565px) and (max-width: 789px) {
+  .app-card {
+    height: unset !important;
+  }
+  .app-card:last-child {
+    margin-top: 20px !important;
+    margin-left: unset !important;
+  }
+}
+@media screen and (min-width: 790px) and (max-width: 809px) {
+  .app-card + .app-card {
+    margin-left: 10px !important;
+  }
+}
+@media screen and (min-width: 616px) and (max-width: 635px) {
+  .app-card + .app-card {
+    margin-left: 10px !important;
+  }
+}
+@media screen and (max-width: 564px) {
+  .app-card {
+    height: unset !important;
+  }
 }

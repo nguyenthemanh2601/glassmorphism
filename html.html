@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-light">
@@ -51,7 +53,7 @@
            <path xmlns="http://www.w3.org/2000/svg" d="M192 192h128v128H192zm0 0" fill="currentColor" data-original="#82b1ff" />
            <path xmlns="http://www.w3.org/2000/svg" d="M384 192h128v128H384zm0 0M0 384h128v128H0zm0 0M192 384h128v128H192zm0 0M384 384h128v128H384zm0 0" fill="currentColor" data-original="#bfc9d1" />
           </svg>
-          <span>All Apps</span>
+          <span>Dashboard</span>
          </a>
          <a href="#">
           <svg viewBox="0 0 488.932 488.932" fill="currentColor">
@@ -162,7 +164,12 @@
       </div>
       <div class="main-container">
        <div class="main-header">
-        <a class="menu-link-main" href="#">All Apps</a>
+        <a class="menu-link-main" href="#">Dashboard</a>
+        <p class="menu-trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </p>
         <div class="header-menu">
          <a class="main-header-link is-active" href="#">Desktop</a>
          <a class="main-header-link" href="#">Mobile</a>
@@ -296,8 +303,8 @@
         </div>
         <div class="content-section">
          <div class="content-section-title">Apps in your plan</div>
-         <div class="apps-card">
-          <div class="app-card">
+         <div class="apps-card row ml-0">
+          <div class="app-card col-sm">
            <span>
             <svg viewBox="0 0 512 512" style="border: 1px solid #a059a9">
              <path xmlns="http://www.w3.org/2000/svg" d="M480 0H32C14.368 0 0 14.368 0 32v448c0 17.664 14.368 32 32 32h448c17.664 0 32-14.336 32-32V32c0-17.632-14.336-32-32-32z" fill="#210027" data-original="#7b1fa2" />
@@ -313,7 +320,7 @@
             <div class="menu"></div>
            </div>
           </div>
-          <div class="app-card">
+          <div class="app-card col-sm">
            <span>
             <svg viewBox="0 0 52 52" style="border: 1px solid #c1316d">
              <g xmlns="http://www.w3.org/2000/svg">
@@ -329,7 +336,7 @@
             <div class="menu"></div>
            </div>
           </div>
-          <div class="app-card">
+          <div class="app-card col-sm">
            <span>
             <svg viewBox="0 0 52 52" style="border: 1px solid #C75DEB">
              <g xmlns="http://www.w3.org/2000/svg">
@@ -347,12 +354,68 @@
           </div>
          </div>
         </div>
+        <div class="content-section">
+            <div class="content-section-title">
+                Apps in your plan
+            </div>
+            <div class="apps-card row">
+                <div class="app-card col-sm">
+                    <span>
+                        <img src="./assets/img/stocks.svg">Stocks
+                    </span>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
        </div>
       </div>
      </div>
      <div class="overlay-app"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/app.js"></script>
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                },
+                {
+                    label: '# of Votes2',
+                    data: [10, 12, 13, 15, 5, 8],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
 </body>
 </html>
