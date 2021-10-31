@@ -981,3 +981,53 @@ body.light-mode:before {
     height: unset !important;
   }
 }
+.card {
+  background-color: var(--theme-bg-color) !important;
+}
+
+.glass-button {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  color: inherit;
+}
+
+.glass-button:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+.btn-rounded {
+  border-radius: 1.1rem;
+}
+.dropdown-hover:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-hover>.dropdown-toggle:active {
+    pointer-events: none;
+}
+
+.dropdown-menu {
+  background: var(--dropdown-bg);
+  transition: all 0.5s ease;
+}
+.dropdown-item {
+  text-decoration: none;
+  color: var(--theme-color);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  margin-top: 0 !important;
+}
+.dropdown-menu.show {
+  pointer-events: all;
+  transform: translatey(25px);
+}
+.dropdown-item:hover {
+  background-color: var(--dropdown-hover);
+}
+@keyframes dropdownHover {
+  100% {display: block;}
+}
