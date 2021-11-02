@@ -65,3 +65,6 @@ const toggleButton = document.querySelector('.dark-light');
 toggleButton.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
 });
+$('.dropdown-menu').parent().on('hidden.bs.dropdown', function(){
+  $(this).find('.dropdown-menu').removeAttr('style');
+});
