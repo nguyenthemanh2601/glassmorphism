@@ -10,7 +10,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -18,7 +23,8 @@
     <div class="dark-light">
         <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"
             stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /></svg>
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
     </div>
     <div class="app">
         <div class="header">
@@ -214,14 +220,296 @@
                                 <div class="mb-3 card">
                                     <div class="card-body">
                                         <h5 class="card-title">Sweet alert</h5>
-                                        <button class="mb-2 mr-2 btn btn-outline-success" id="success-button">Success</button>
-                                        <button class="mb-2 mr-2 btn btn-outline-danger" id="error-button">ERROR</button>
-                                        <button class="mb-2 mr-2 btn btn-outline-primary" id="confirm-button">Confirm</button>
+                                        <button class="mb-2 mr-2 btn btn-outline-success"
+                                            id="success-button">Success</button>
+                                        <button class="mb-2 mr-2 btn btn-outline-danger"
+                                            id="error-button">ERROR</button>
+                                        <button class="mb-2 mr-2 btn btn-outline-primary"
+                                            id="confirm-button">Confirm</button>
                                         <button class="mb-2 mr-2 btn btn-outline-info" id="mixin-button">Mixin</button>
                                         <button class="mb-2 mr-2 btn btn-outline-warning" id="ajax-button">Ajax</button>
-                                        <button class="mb-2 mr-2 btn btn-outline-light" id="auto-close-button">Auto close</button>
-                                        <button class="mb-2 mr-2 btn btn-outline-dark" id="position-button">Position</button>
+                                        <button class="mb-2 mr-2 btn btn-outline-light" id="auto-close-button">Auto
+                                            close</button>
+                                        <button class="mb-2 mr-2 btn btn-outline-dark"
+                                            id="position-button">Position</button>
                                         <button class="mb-2 mr-2 btn btn-link" id="html-button">Html</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="mb-3 card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bootstrap nofify</h5>
+                                        <div class="row">
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="text-center">Placement</p>
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control" name="notify_placement_from">
+                                                            <option value="top">Top</option>
+                                                            <option value="bottom">Bottom</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control" name="notify_placement_align">
+                                                            <option value="left">Left</option>
+                                                            <option value="center">Center</option>
+                                                            <option value="right" selected>Right</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-3">
+                                                <p class="text-center">Animation</p>
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control" name="notify_animate_enter">
+                                                            <optgroup label="Attention Seekers">
+                                                                <option value="bounce">bounce</option>
+                                                                <option value="flash">flash</option>
+                                                                <option value="pulse">pulse</option>
+                                                                <option value="rubberBand">rubberBand</option>
+                                                                <option value="shake">shake</option>
+                                                                <option value="swing">swing</option>
+                                                                <option value="tada">tada</option>
+                                                                <option value="wobble">wobble</option>
+                                                                <option value="jello">jello</option>
+                                                            </optgroup>
+                                                            <optgroup label="Bouncing Entrances">
+                                                                <option value="bounceIn">bounceIn</option>
+                                                                <option value="bounceInDown">bounceInDown</option>
+                                                                <option value="bounceInLeft">bounceInLeft</option>
+                                                                <option value="bounceInRight">bounceInRight</option>
+                                                                <option value="bounceInUp">bounceInUp</option>
+                                                            </optgroup>
+                                                            <optgroup label="Fading Entrances">
+                                                                <option value="fadeIn">fadeIn</option>
+                                                                <option value="fadeInDown">fadeInDown</option>
+                                                                <option value="fadeInDownBig">fadeInDownBig</option>
+                                                                <option value="fadeInLeft">fadeInLeft</option>
+                                                                <option value="fadeInLeftBig">fadeInLeftBig</option>
+                                                                <option value="fadeInRight">fadeInRight</option>
+                                                                <option value="fadeInRightBig">fadeInRightBig</option>
+                                                                <option value="fadeInUp">fadeInUp</option>
+                                                                <option value="fadeInUpBig">fadeInUpBig</option>
+                                                            </optgroup>
+                                                            <optgroup label="Flippers">
+                                                                <option value="flip">flip</option>
+                                                                <option value="flipInX">flipInX</option>
+                                                                <option value="flipInY">flipInY</option>
+                                                            </optgroup>
+                                                            <optgroup label="Rotating Entrances">
+                                                                <option value="rotateIn">rotateIn</option>
+                                                                <option value="rotateInDownLeft">rotateInDownLeft
+                                                                </option>
+                                                                <option value="rotateInDownRight">rotateInDownRight
+                                                                </option>
+                                                                <option value="rotateInUpLeft">rotateInUpLeft</option>
+                                                                <option value="rotateInUpRight">rotateInUpRight</option>
+                                                            </optgroup>
+                                                            <optgroup label="Sliding Entrances">
+                                                                <option value="slideInUp">slideInUp</option>
+                                                                <option value="slideInDown">slideInDown</option>
+                                                                <option value="slideInLeft">slideInLeft</option>
+                                                                <option value="slideInRight">slideInRight</option>
+                                                            </optgroup>
+                                                            <optgroup label="Zoom Entrances">
+                                                                <option value="zoomIn">zoomIn</option>
+                                                                <option value="zoomInDown">zoomInDown</option>
+                                                                <option value="zoomInLeft">zoomInLeft</option>
+                                                                <option value="zoomInRight">zoomInRight</option>
+                                                                <option value="zoomInUp">zoomInUp</option>
+                                                            </optgroup>
+                                                            <optgroup label="Specials">
+                                                                <option value="rollIn">rollIn</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <select class="form-control" name="notify_animate_exit">
+                                                            <optgroup label="Attention Seekers">
+                                                                <option value="pulse" selected>pulse</option>
+                                                                <option value="rubberBand">rubberBand</option>
+                                                                <option value="swing">swing</option>
+                                                                <option value="tada">tada</option>
+                                                                <option value="wobble">wobble</option>
+                                                                <option value="jello">jello</option>
+                                                            </optgroup>
+                                                            <optgroup label="Bouncing Exits">
+                                                                <option value="bounceOut">bounceOut</option>
+                                                                <option value="bounceOutDown">bounceOutDown</option>
+                                                                <option value="bounceOutLeft">bounceOutLeft</option>
+                                                                <option value="bounceOutRight">bounceOutRight</option>
+                                                                <option value="bounceOutUp">bounceOutUp</option>
+                                                            </optgroup>
+                                                            <optgroup label="Fading Exits">
+                                                                <option value="fadeOut">fadeOut</option>
+                                                                <option value="fadeOutDown">fadeOutDown</option>
+                                                                <option value="fadeOutDownBig">fadeOutDownBig</option>
+                                                                <option value="fadeOutLeft">fadeOutLeft</option>
+                                                                <option value="fadeOutLeftBig">fadeOutLeftBig</option>
+                                                                <option value="fadeOutRight">fadeOutRight</option>
+                                                                <option value="fadeOutRightBig">fadeOutRightBig</option>
+                                                                <option value="fadeOutUp">fadeOutUp</option>
+                                                                <option value="fadeOutUpBig">fadeOutUpBig</option>
+                                                            </optgroup>
+                                                            <optgroup label="Flippers">
+                                                                <option value="flip">flip</option>
+                                                                <option value="flipOutX">flipOutX</option>
+                                                                <option value="flipOutY">flipOutY</option>
+                                                            </optgroup>
+                                                            <optgroup label="Rotating Exits">
+                                                                <option value="rotateOut">rotateOut</option>
+                                                                <option value="rotateOutDownLeft">rotateOutDownLeft
+                                                                </option>
+                                                                <option value="rotateOutDownRight">rotateOutDownRight
+                                                                </option>
+                                                                <option value="rotateOutUpLeft">rotateOutUpLeft</option>
+                                                                <option value="rotateOutUpRight">rotateOutUpRight
+                                                                </option>
+                                                            </optgroup>
+                                                            <optgroup label="Sliding Exits">
+                                                                <option value="slideOutUp">slideOutUp</option>
+                                                                <option value="slideOutDown">slideOutDown</option>
+                                                                <option value="slideOutLeft">slideOutLeft</option>
+                                                                <option value="slideOutRight">slideOutRight</option>
+                                                            </optgroup>
+                                                            <optgroup label="Zoom Exits">
+                                                                <option value="zoomOut">zoomOut</option>
+                                                                <option value="zoomOutDown">zoomOutDown</option>
+                                                                <option value="zoomOutLeft">zoomOutLeft</option>
+                                                                <option value="zoomOutRight">zoomOutRight</option>
+                                                                <option value="zoomOutUp">zoomOutUp</option>
+                                                            </optgroup>
+                                                            <optgroup label="Specials">
+                                                                <option value="hinge">hinge</option>
+                                                                <option value="rollOut">rollOut</option>
+                                                            </optgroup>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 mt-3">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6">
+                                                        <p class="text-center">Icon</p>
+                                                        <div class="col-lg-12 pl-0 pr-0">
+                                                            <select class="form-control" name="notify_icon">
+                                                                <option value="fa fa-bell" selected>fa fa-bell</option>
+                                                                <option value="fa fa-exclamation">fa fa-exclamation</option>
+                                                                <option value="fa fa-warning">fa fa-warning</option>
+                                                                <option value="fa fa-cloud-download">fa fa-cloud-download</option>
+                                                                <option value="fa fa-exclamation-circle">fa fa-exclamation-circle</option>
+                                                                <option value="fa fa-sign-in-alt">fa fa-sign-in-alt</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <p class="text-center">State</p>
+                                                        <div class="col-lg-12 pl-0 pr-0">
+                                                            <select class="form-control" name="notify_state">
+                                                                <option value="success">Success</option>
+                                                                <option value="danger">Danger</option>
+                                                                <option value="warning">Warning</option>
+                                                                <option value="info">Info</option>
+                                                                <option value="primary">Primary</option>
+                                                                <option value="dark">Dark</option>
+                                                                <option value="light">Light</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>URL Clickable</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="show-url" />
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>Allow dismiss</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="notify_allow_dismiss" checked/>
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>Pause on hover</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="nofify_pause_on_top" />
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>Newest on top</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="notify_newest_on_top" />
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>Show Title</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="notify_show_title" />
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 d-none">
+                                                    <input type="text" class="form-control" value="Notification title" placeholder="Notification title" name="notify_title" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                                <div class="d-flex">
+                                                    <div class="col-lg-6 mt-1">
+                                                        <label>Show Progress</label>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="ios-checkbox">
+                                                            <input type="checkbox" name="notify_show_progress" />
+                                                            <label></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer text-muted mt-3 d-flex justify-content-center">
+                                        <div class="col-lg-4 d-flex justify-content-around">
+                                            <button class="mb-2 mr-2 btn btn-outline-success" onclick="showBootstrapNotify()">Display</button>
+                                            <button class="mb-2 mr-2 btn btn-outline-danger" onclick="clearAllNotify()">Clear</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -240,16 +528,17 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="assets/js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+    <script src="/assets/js/bootstrap-notify.js"></script>
     <script>
         $(document).ready(function () {
-            $('#success-button').on('click', function() {
+            $('#success-button').on('click', function () {
                 Swal.fire(
                     'Good job!',
                     'You clicked the button!',
                     'success'
                 );
             });
-            $('#error-button').on('click', function() {
+            $('#error-button').on('click', function () {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
@@ -257,7 +546,7 @@
                     footer: '<a href="">Why do I have this issue?</a>'
                 });
             });
-            $('#confirm-button').on('click', function() {
+            $('#confirm-button').on('click', function () {
                 const swalWithBootstrapButtons = Swal.mixin({
                     customClass: {
                         confirmButton: 'btn btn-success m-2',
@@ -274,23 +563,23 @@
                     cancelButtonText: 'No, cancel!',
                     reverseButtons: true // đảo ngược button
                 })
-                .then((result) => {
-                    if (result.isConfirmed) {
-                        swalWithBootstrapButtons.fire(
-                            'Deleted!',
-                            'Your file has been deleted.',
-                            'success'
-                        );
-                    } else if (result.dismiss === Swal.DismissReason.cancel) {
-                        swalWithBootstrapButtons.fire(
-                            'Cancelled',
-                            'Your imaginary file is safe :)',
-                            'error'
-                        );
-                    }
-                });
+                    .then((result) => {
+                        if (result.isConfirmed) {
+                            swalWithBootstrapButtons.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            );
+                        } else if (result.dismiss === Swal.DismissReason.cancel) {
+                            swalWithBootstrapButtons.fire(
+                                'Cancelled',
+                                'Your imaginary file is safe :)',
+                                'error'
+                            );
+                        }
+                    });
             });
-            $('#mixin-button').on('click', function() {
+            $('#mixin-button').on('click', function () {
                 Swal.mixin({
                     toast: true,
                     position: 'top-end',
@@ -340,7 +629,7 @@
                     }
                 });
             });
-            $('#auto-close-button').on('click', function() {
+            $('#auto-close-button').on('click', function () {
                 let timerInterval
                 Swal.fire({
                     title: 'Auto close alert!',
@@ -364,7 +653,7 @@
                     }
                 })
             });
-            $('#position-button').on('click', function() {
+            $('#position-button').on('click', function () {
                 Swal.fire({
                     position: 'bottom-end',
                     icon: 'success',
@@ -373,7 +662,7 @@
                     timer: 5000
                 })
             });
-            $('#html-button').on('click', function() {
+            $('#html-button').on('click', function () {
                 Swal.fire({
                     title: '<strong>HTML <u>example</u></strong>',
                     icon: 'info',
@@ -392,7 +681,88 @@
                     cancelButtonAriaLabel: 'Thumbs down'
                 })
             });
-        })
+        });
+        $('input[name="notify_show_title"]').on('change', function() {
+            if (this.checked) {
+                return $('input[name="notify_title"]').parent().removeClass('d-none');
+            }
+            $('input[name="notify_title"]').parent().addClass('d-none');
+        });
+        const showBootstrapNotify = function () {
+            var content = {};
+            content.message = 'New order has been placed';
+            if ($('input[name=notify_show_title]').prop('checked')) {
+                content.title = $('input[name="notify_title"]').val();
+            }
+            if ($('select[name=notify_icon]').val() != '') {
+                content.icon = 'icon ' + $('select[name=notify_icon]').val();
+            }
+            if ($('input[name="show-url"]').prop('checked')) {
+                content.url = 'https://themanh.dev';
+                content.target = '_blank';
+            }
+
+            var notify = $.notify(content, {
+                type: $('select[name="notify_state"]').val(),
+                icon_type: content.icon ? 'i-tag' : '',
+                allow_dismiss: $('input[name="notify_allow_dismiss"]').prop('checked'),
+                newest_on_top: $('input[name="notify_newest_on_top"]').prop('checked'),
+                mouse_over: $('input[name="nofify_pause_on_top"]').prop('checked'),
+                showProgressbar: $('input[name="notify_show_progress"]').prop('checked'),
+                // spacing: $('#input[name="notify_spacing"]').val(),
+                // timer: $('input[name="notify_timer"]').val(),
+                timer: 2000,
+                placement: {
+                    from: $('select[name="notify_placement_from"]').val(),
+                    align: $('select[name="notify_placement_align"]').val()
+                },
+                // offset: {
+                //     x: $('input[name="notify_offset_x"]').val(),
+                //     y: $('input[name="notify_offset_y"]').val()
+                // },
+                // delay: $('input[name="notify_delay"]').val(),
+                // z_index: $('input[name="notify_zindex"]').val(),
+                animate: {
+                    enter: 'animate__animated animate__' + $('select[name="notify_animate_enter"]').val(),
+                    exit: 'animate__animated animate__' + $('select[name="notify_animate_exit"]').val()
+                }
+            });
+
+            if ($('input[name="notify_show_progress"]').prop('checked')) {
+                notify.timer = 2000;
+                setTimeout(function () {
+                    notify.update('message', '<strong>Saving</strong> Page Data.');
+                    notify.update('type', 'danger');
+                    notify.update('progress', 20);
+                }, 1000);
+
+                setTimeout(function () {
+                    notify.update('message', '<strong>Saving</strong> User Data.');
+                    notify.update('type', 'warning');
+                    notify.update('progress', 40);
+                }, 2000);
+
+                setTimeout(function () {
+                    notify.update('message', '<strong>Saving</strong> Profile Data.');
+                    notify.update('type', 'info');
+                    notify.update('progress', 65);
+                }, 3000);
+
+                setTimeout(function () {
+                    notify.update('message', '<strong>Checking</strong> for errors.');
+                    notify.update('type', 'success');
+                    notify.update('progress', 100);
+                }, 4000);
+                return;
+            }
+        }
+        function clearAllNotify() {
+            $('[data-notify="container"]')
+            .find('[data-notify="dismiss"]')
+            .each(function() {
+                $(this).click();
+            })
+        }
     </script>
 </body>
 
